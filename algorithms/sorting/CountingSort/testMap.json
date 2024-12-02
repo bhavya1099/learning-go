@@ -1,0 +1,8 @@
+{
+  "/var/tmp/Roost/RoostGPT/go-unit-scenario-filter/1733118313/source/learning-go/algorithms/sorting/CountingSort/countingsort298_test.go": {
+    "/var/tmp/Roost/RoostGPT/go-unit-scenario-filter/1733118313/source/learning-go/algorithms/sorting/CountingSort/getcountarraylength_test.go": {
+      "testMethodHash": "96c2810565",
+      "roostMethodHash": "ROOST_METHOD_HASH=getCountArrayLength_78c814dcdc\nROOST_METHOD_SIG_HASH=getCountArrayLength_93c7685300\n\n"
+    }
+  }
+}

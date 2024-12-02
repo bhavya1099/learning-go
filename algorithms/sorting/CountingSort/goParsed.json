@@ -1,0 +1,149 @@
+{
+  "/var/tmp/Roost/RoostGPT/go-unit-scenario-filter/1733118313/source/learning-go/algorithms/sorting/CountingSort/countingsort.go": {
+    "function_dict": {
+      "countingSort": {
+        "code": "func countingSort(arr []int) []int {\n\tk := getCountArrayLength(arr)\n\tcount := make([]int, k)\n\tfor i := 0; i < len(arr); i++ {\n\t\tcount[arr[i]] += 1\n\t}\n\tfor i, j := 0, 0; i < k; i++ {\n\t\tfor {\n\t\t\tif count[i] > 0 {\n\t\t\t\tarr[j] = i\n\t\t\t\tj += 1\n\t\t\t\tcount[i] -= 1\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tbreak\n\t\t}\n\t}\n\treturn arr\n}",
+        "is_file_function": true,
+        "associated_struct": [
+          "int",
+          "int"
+        ],
+        "associated_func": [
+          "getCountArrayLength",
+          "make",
+          "len"
+        ],
+        "dependent_files": null,
+        "test_exists": true,
+        "test_functions": {
+          "/var/tmp/Roost/RoostGPT/go-unit-scenario-filter/1733118313/source/learning-go/algorithms/sorting/CountingSort/countingsort_test.go": {
+            "TestSelectionSort": {
+              "code": "func TestSelectionSort(t *testing.T) {\n\trandom := rand.New(rand.NewSource(time.Now().UnixNano()))\n\tarray1 := make([]int, random.Intn(100-10)+10)\n\tfor i := range array1 {\n\t\tarray1[i] = random.Intn(100)\n\t}\n\tarray2 := make(sort.IntSlice, len(array1))\n\tcopy(array2, array1)\n\tarr := countingSort(array1)\n\tarray2.Sort()\n\tfor i := range arr {\n\t\tif arr[i] != array2[i] {\n\t\t\tt.Fail()\n\t\t}\n\t}\n}",
+              "is_file_function": false,
+              "associated_struct": null,
+              "associated_func": [
+                "rand.New",
+                "rand.NewSource",
+                "time.Now",
+                "make",
+                "random.Intn",
+                "random.Intn",
+                "make",
+                "len",
+                "copy",
+                "countingSort",
+                "array2.Sort",
+                "t.Fail"
+              ],
+              "dependent_files": null,
+              "test_exists": false,
+              "test_functions": null,
+              "requires_test": false,
+              "access_modifier": ""
+            }
+          }
+        },
+        "requires_test": true,
+        "access_modifier": "private"
+      },
+      "getCountArrayLength": {
+        "code": "func getCountArrayLength(arr []int) int {\n\tif len(arr) == 0 {\n\t\treturn 1\n\t}\n\tk := arr[0]\n\tfor _, value := range arr {\n\t\tif value > k {\n\t\t\tk = value\n\t\t}\n\t}\n\treturn k + 1\n}",
+        "is_file_function": true,
+        "associated_struct": [
+          "int",
+          "int"
+        ],
+        "associated_func": [
+          "len"
+        ],
+        "dependent_files": null,
+        "test_exists": false,
+        "test_functions": {},
+        "requires_test": true,
+        "access_modifier": "private"
+      },
+      "len": {
+        "code": "",
+        "is_file_function": false,
+        "associated_struct": null,
+        "associated_func": null,
+        "dependent_files": null,
+        "test_exists": true,
+        "test_functions": {
+          "/var/tmp/Roost/RoostGPT/go-unit-scenario-filter/1733118313/source/learning-go/algorithms/sorting/CountingSort/countingsort_test.go": {
+            "TestSelectionSort": {
+              "code": "func TestSelectionSort(t *testing.T) {\n\trandom := rand.New(rand.NewSource(time.Now().UnixNano()))\n\tarray1 := make([]int, random.Intn(100-10)+10)\n\tfor i := range array1 {\n\t\tarray1[i] = random.Intn(100)\n\t}\n\tarray2 := make(sort.IntSlice, len(array1))\n\tcopy(array2, array1)\n\tarr := countingSort(array1)\n\tarray2.Sort()\n\tfor i := range arr {\n\t\tif arr[i] != array2[i] {\n\t\t\tt.Fail()\n\t\t}\n\t}\n}",
+              "is_file_function": false,
+              "associated_struct": null,
+              "associated_func": [
+                "rand.New",
+                "rand.NewSource",
+                "time.Now",
+                "make",
+                "random.Intn",
+                "random.Intn",
+                "make",
+                "len",
+                "copy",
+                "countingSort",
+                "array2.Sort",
+                "t.Fail"
+              ],
+              "dependent_files": null,
+              "test_exists": false,
+              "test_functions": null,
+              "requires_test": false,
+              "access_modifier": ""
+            }
+          }
+        },
+        "requires_test": false,
+        "access_modifier": ""
+      },
+      "make": {
+        "code": "",
+        "is_file_function": false,
+        "associated_struct": null,
+        "associated_func": null,
+        "dependent_files": null,
+        "test_exists": true,
+        "test_functions": {
+          "/var/tmp/Roost/RoostGPT/go-unit-scenario-filter/1733118313/source/learning-go/algorithms/sorting/CountingSort/countingsort_test.go": {
+            "TestSelectionSort": {
+              "code": "func TestSelectionSort(t *testing.T) {\n\trandom := rand.New(rand.NewSource(time.Now().UnixNano()))\n\tarray1 := make([]int, random.Intn(100-10)+10)\n\tfor i := range array1 {\n\t\tarray1[i] = random.Intn(100)\n\t}\n\tarray2 := make(sort.IntSlice, len(array1))\n\tcopy(array2, array1)\n\tarr := countingSort(array1)\n\tarray2.Sort()\n\tfor i := range arr {\n\t\tif arr[i] != array2[i] {\n\t\t\tt.Fail()\n\t\t}\n\t}\n}",
+              "is_file_function": false,
+              "associated_struct": null,
+              "associated_func": [
+                "rand.New",
+                "rand.NewSource",
+                "time.Now",
+                "make",
+                "random.Intn",
+                "random.Intn",
+                "make",
+                "len",
+                "copy",
+                "countingSort",
+                "array2.Sort",
+                "t.Fail"
+              ],
+              "dependent_files": null,
+              "test_exists": false,
+              "test_functions": null,
+              "requires_test": false,
+              "access_modifier": ""
+            }
+          }
+        },
+        "requires_test": false,
+        "access_modifier": ""
+      }
+    },
+    "struct_dict": {
+      "int": ""
+    },
+    "package_dict": {},
+    "package_name": "CountingSort",
+    "imports": "import (\n)\n"
+  }
+}
